@@ -31,11 +31,11 @@ function ApiData(){
     const options = [
       {
         value: 292,
-        label: "USD"
+        label: "EUR"
       },
       {
         value: 145,
-        label: "EUR",
+        label: "USD",
       },
       {
         value: 298,
@@ -62,7 +62,7 @@ function ApiData(){
   }
 
   return (
-      <div style={{maxWidth:"1000px", margin: "0 auto"}}>
+      <div style={{maxWidth:"900px", margin: "0 auto"}}>
           <h1>Currency</h1>
           <p>{startDateValue.toISOString().slice(0,10)} - {endDateValue.toISOString().slice(0,10)}</p>
           <Select  defaultvalue={options[0]} options={options} onChange={currentHandler}></Select>
