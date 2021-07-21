@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import ApiData from './ApiData'
+import CalendarComponent from './calendar/CalendarComponent'
+import store from './store';
+
 
 function App() {
+  function currentDate(){
+    const date = new Date();
+    console.log(date)
+
+    return ({
+      currentDate: date.getDate(),
+      currentMonth: date.getMonth(),
+      currentYear: date.getFullYear(),
+    });
+  }
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <currentDate/>
+      <ApiData currentDate={currentDate()}></ApiData>
+      <CalendarComponent store = {store}/>
     </div>
   );
+  
 }
 
 export default App;

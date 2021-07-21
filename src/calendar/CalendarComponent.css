@@ -1,0 +1,17 @@
+@media(min-width: 500px){
+.calendars {
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 15%;
+}
+.calendars div{
+    padding-top: 1%;
+} }
+
+@media(max-width:500px){
+.calendars {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+}
